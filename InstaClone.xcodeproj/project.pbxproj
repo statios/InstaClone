@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,13 +11,12 @@
 		A1A39175B9CD987F1467316C /* Pods_InstaClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15890B3F2CB6013F724270D3 /* Pods_InstaClone.framework */; };
 		ACAE7D4A16A10BD12A479EAE /* Pods_InstaCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFA6A640B57EE37EF85FCC3 /* Pods_InstaCloneTests.framework */; };
 		F91402BD25935A4C0073BEDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91402BC25935A4C0073BEDE /* AppDelegate.swift */; };
-		F91402BF25935A4D0073BEDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91402BE25935A4D0073BEDE /* SceneDelegate.swift */; };
 		F91402C125935A4D0073BEDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91402C025935A4D0073BEDE /* ViewController.swift */; };
-		F91402C425935A4D0073BEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91402C225935A4D0073BEDE /* Main.storyboard */; };
 		F91402C625935A4E0073BEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91402C525935A4E0073BEDE /* Assets.xcassets */; };
 		F91402C925935A4E0073BEDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91402C725935A4E0073BEDE /* LaunchScreen.storyboard */; };
 		F91402D425935A4E0073BEDE /* InstaCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91402D325935A4E0073BEDE /* InstaCloneTests.swift */; };
 		F91402DF25935A4E0073BEDE /* InstaCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91402DE25935A4E0073BEDE /* InstaCloneUITests.swift */; };
+		F914032F259368BD0073BEDE /* AppResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F914032E259368BD0073BEDE /* AppResolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +47,7 @@
 		C9848A1E4417DD38F8521876 /* Pods-InstaClone-InstaCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaClone-InstaCloneUITests.debug.xcconfig"; path = "Target Support Files/Pods-InstaClone-InstaCloneUITests/Pods-InstaClone-InstaCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F91402B925935A4C0073BEDE /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91402BC25935A4C0073BEDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F91402BE25935A4D0073BEDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F91402C025935A4D0073BEDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F91402C325935A4D0073BEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F91402C525935A4E0073BEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F91402C825935A4E0073BEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F91402CA25935A4E0073BEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +57,7 @@
 		F91402DA25935A4E0073BEDE /* InstaCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91402DE25935A4E0073BEDE /* InstaCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneUITests.swift; sourceTree = "<group>"; };
 		F91402E025935A4E0073BEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F914032E259368BD0073BEDE /* AppResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResolver.swift; sourceTree = SOURCE_ROOT; };
 		F9C8C54D4EB3AE51D7DD95FB /* Pods_InstaClone_InstaCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaClone_InstaCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,7 +99,6 @@
 				4937DDFE1A89BAA840ADE4B2 /* Pods-InstaCloneTests.debug.xcconfig */,
 				0D026BF819D00940D92BE9CA /* Pods-InstaCloneTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,13 +137,9 @@
 		F91402BB25935A4C0073BEDE /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
-				F91402BC25935A4C0073BEDE /* AppDelegate.swift */,
-				F91402BE25935A4D0073BEDE /* SceneDelegate.swift */,
-				F91402C025935A4D0073BEDE /* ViewController.swift */,
-				F91402C225935A4D0073BEDE /* Main.storyboard */,
-				F91402C525935A4E0073BEDE /* Assets.xcassets */,
-				F91402C725935A4E0073BEDE /* LaunchScreen.storyboard */,
-				F91402CA25935A4E0073BEDE /* Info.plist */,
+				F91403262593689E0073BEDE /* Sources */,
+				F914031E2593686C0073BEDE /* Resources */,
+				F9140324259368860073BEDE /* Supportings */,
 			);
 			path = InstaClone;
 			sourceTree = "<group>";
@@ -167,6 +160,73 @@
 				F91402E025935A4E0073BEDE /* Info.plist */,
 			);
 			path = InstaCloneUITests;
+			sourceTree = "<group>";
+		};
+		F914031E2593686C0073BEDE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F91403232593687F0073BEDE /* Assets */,
+				F9140322259368770073BEDE /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F9140322259368770073BEDE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F91402C725935A4E0073BEDE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F91403232593687F0073BEDE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F91402C525935A4E0073BEDE /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F9140324259368860073BEDE /* Supportings */ = {
+			isa = PBXGroup;
+			children = (
+				F9140325259368950073BEDE /* plists */,
+			);
+			path = Supportings;
+			sourceTree = "<group>";
+		};
+		F9140325259368950073BEDE /* plists */ = {
+			isa = PBXGroup;
+			children = (
+				F91402CA25935A4E0073BEDE /* Info.plist */,
+			);
+			path = plists;
+			sourceTree = "<group>";
+		};
+		F91403262593689E0073BEDE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F914032A259368A30073BEDE /* Application */,
+				F9140333259368C20073BEDE /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F914032A259368A30073BEDE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F91402BC25935A4C0073BEDE /* AppDelegate.swift */,
+				F914032E259368BD0073BEDE /* AppResolver.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F9140333259368C20073BEDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F91402C025935A4D0073BEDE /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +339,6 @@
 			files = (
 				F91402C925935A4E0073BEDE /* LaunchScreen.storyboard in Resources */,
 				F91402C625935A4E0073BEDE /* Assets.xcassets in Resources */,
-				F91402C425935A4D0073BEDE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +466,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F914032F259368BD0073BEDE /* AppResolver.swift in Sources */,
 				F91402C125935A4D0073BEDE /* ViewController.swift in Sources */,
 				F91402BD25935A4C0073BEDE /* AppDelegate.swift in Sources */,
-				F91402BF25935A4D0073BEDE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,14 +504,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F91402C225935A4D0073BEDE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F91402C325935A4D0073BEDE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F91402C725935A4E0073BEDE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -588,7 +639,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
-				INFOPLIST_FILE = InstaClone/Info.plist;
+				INFOPLIST_FILE = InstaClone/Supportings/plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -609,7 +660,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
-				INFOPLIST_FILE = InstaClone/Info.plist;
+				INFOPLIST_FILE = InstaClone/Supportings/plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
