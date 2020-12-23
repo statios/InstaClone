@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     window = UIWindow().then {
       $0.frame = UIScreen.main.bounds
-      $0.rootViewController = UIViewController()
+      $0.rootViewController = FeedViewController()
       $0.makeKeyAndVisible()
     }
     
