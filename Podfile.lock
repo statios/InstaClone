@@ -21,6 +21,7 @@ PODS:
   - PINRemoteImage/PINCache (3.0.3):
     - PINCache (~> 3.0.3)
     - PINRemoteImage/Core
+  - Resolver (1.2.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -52,6 +53,7 @@ PODS:
 DEPENDENCIES:
   - Moya/RxSwift
   - ObjectMapper
+  - Resolver
   - RxCocoa
   - RxSwift
   - Texture
@@ -65,6 +67,7 @@ SPEC REPOS:
     - PINCache
     - PINOperation
     - PINRemoteImage
+    - Resolver
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -78,12 +81,13 @@ SPEC CHECKSUMS:
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
+  Resolver: 764e380b2ddb26bba48c6e45ab393c968894a156
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   Texture: 2f109e937850d94d1d07232041c9c7313ccddb81
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: f1ac7b822284e808986409d3262f9804fe0eafce
+PODFILE CHECKSUM: 86393001d45c0c88f983ce42ad9de83cc9446fc5
 
 COCOAPODS: 1.10.0

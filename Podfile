@@ -12,6 +12,7 @@ target 'InstaClone' do
   pod 'Then'
   pod 'ObjectMapper'
   pod 'Moya/RxSwift'
+  pod 'Resolver'
 
   target 'InstaCloneTests' do
     inherit! :search_paths
