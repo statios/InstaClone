@@ -7,17 +7,22 @@
 
 import UIKit
 import Then
+import Resolver
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    
+    AppResolver.registerAllServices()
     
     window = UIWindow().then {
       $0.frame = UIScreen.main.bounds
-      $0.rootViewController = FeedViewController()
+      $0.rootViewController = HomeViewController()
       $0.makeKeyAndVisible()
     }
     

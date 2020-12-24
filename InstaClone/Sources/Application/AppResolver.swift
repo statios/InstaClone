@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import Resolver
+
+final class AppResolver: ResolverRegistering {
+  static func registerAllServices() {
+    
+  }
+}
