@@ -1,22 +1,22 @@
 //
-//  FeedViewController.swift
+//  HomeViewController.swift
 //  InstaClone
 //
-//  Created by Stat on 2020/12/23.
+//  Created by KIHYUN SO on 2020/12/24.
 //
 
-import AsyncDisplayKit
+import KarrotUI
 
-protocol FeedDisplayLogic: class {
+protocol HomeDisplayLogic: class {
 
 }
 
-final class FeedViewController: BaseASViewController {
+final class HomeViewController: BaseASViewController {
 
   // MARK: VIP
 
-  var router: (FeedRoutingLogic & FeedDataPassing)?
-  var interactor: FeedBusinessLogic?
+  var router: (HomeRoutingLogic & HomeDataPassing)?
+  var interactor: HomeBusinessLogic?
 
 
   // MARK: Initializing
@@ -35,12 +35,12 @@ final class FeedViewController: BaseASViewController {
 
   private func configure() {
     let viewController = self
-    let interactor = FeedInteractor()
-    let presenter = FeedPresenter()
-    let router = FeedRouter()
+    let interactor = HomeInteractor()
+    let presenter = HomePresenter()
+    let router = HomeRouter()
 
     interactor.presenter = presenter
-    interactor.worker = FeedWorker()
+    interactor.worker = HomeWorker()
 
     presenter.view = viewController
 
@@ -55,6 +55,6 @@ final class FeedViewController: BaseASViewController {
 
 // MARK: - Display Logic
 
-extension FeedViewController: FeedDisplayLogic {
+extension HomeViewController: HomeDisplayLogic {
 
 }
