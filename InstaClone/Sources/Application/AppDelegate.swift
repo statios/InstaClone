@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     window = UIWindow().then {
       $0.frame = UIScreen.main.bounds
-      $0.rootViewController = HomeViewController()
+      $0.backgroundColor = .white
+      $0.rootViewController = UINavigationController(rootViewController: MainViewController())
       $0.makeKeyAndVisible()
     }
     

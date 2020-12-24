@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Resolver
 
 protocol HomeBusinessLogic: class {
 
@@ -15,14 +16,11 @@ protocol HomeDataStore: class {
 
 }
 
-final class HomeInteractor: HomeDataStore {
+final class HomeInteractor: BaseInteractor, HomeDataStore {
 
-  var worker: HomeWorkerLogic?
-  var presenter: HomePresentationLogic?
-
-  deinit {
-    debugPrint("DEINIT: HomeInteractor")
-  }
+  @Injected var networkWorker: NetworkWorkerLogic
+  @Injected var presenter: HomePresentationLogic
+  
 }
 
 

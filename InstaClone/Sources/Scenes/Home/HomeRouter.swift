@@ -6,24 +6,22 @@
 //
 
 import UIKit
+import Resolver
 
 protocol HomeRoutingLogic: class {
-
+  
 }
 
 protocol HomeDataPassing: class {
 
-  var dataStore: HomeDataStore? { get set }
+  var dataStore: HomeDataStore { get set }
 }
 
-final class HomeRouter: HomeDataPassing {
+final class HomeRouter: BaseRouter, HomeDataPassing {
 
   weak var viewController: HomeViewController?
-  var dataStore: HomeDataStore?
-
-  deinit {
-    debugPrint("DEINIT: HomeRouter")
-  }
+  @Injected var dataStore: HomeDataStore
+  
 }
 
 

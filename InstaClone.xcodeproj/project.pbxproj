@@ -23,12 +23,24 @@
 		F9A8875025949057008099EC /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A8874F25949057008099EC /* Story.swift */; };
 		F9A8875B25949065008099EC /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A8875A25949065008099EC /* Feed.swift */; };
 		F9A8876325949074008099EC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A8876225949074008099EC /* Comment.swift */; };
-		F9D7B088259499E300FAB19B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B082259499E300FAB19B /* HomePresenter.swift */; };
-		F9D7B089259499E300FAB19B /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B083259499E300FAB19B /* HomeWorker.swift */; };
 		F9D7B08A259499E300FAB19B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B084259499E300FAB19B /* HomeRouter.swift */; };
 		F9D7B08B259499E300FAB19B /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B085259499E300FAB19B /* HomeModels.swift */; };
 		F9D7B08C259499E300FAB19B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B086259499E300FAB19B /* HomeViewController.swift */; };
 		F9D7B08D259499E300FAB19B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B087259499E300FAB19B /* HomeInteractor.swift */; };
+		F9D7B09225949F9C00FAB19B /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B09125949F9C00FAB19B /* NetworkWorker.swift */; };
+		F9D7B0A02594A91E00FAB19B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B09F2594A91E00FAB19B /* HomePresenter.swift */; };
+		F9D7B0AE2594ABF800FAB19B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0AD2594ABF800FAB19B /* MainViewController.swift */; };
+		F9D7B0B62594B45300FAB19B /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0B52594B45300FAB19B /* BaseNode.swift */; };
+		F9D7B0BC2594B52A00FAB19B /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0BB2594B52A00FAB19B /* Logging.swift */; };
+		F9D7B0C42594B5D200FAB19B /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0C32594B5D200FAB19B /* BaseInteractor.swift */; };
+		F9D7B0C92594B62E00FAB19B /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0C82594B62E00FAB19B /* BasePresenter.swift */; };
+		F9D7B0CE2594B65500FAB19B /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0CD2594B65500FAB19B /* BaseRouter.swift */; };
+		F9D7B0D32594B67A00FAB19B /* BaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0D22594B67A00FAB19B /* BaseWorker.swift */; };
+		F9D7B0DE2594BA6300FAB19B /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0D82594BA6300FAB19B /* SearchPresenter.swift */; };
+		F9D7B0E02594BA6300FAB19B /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0DA2594BA6300FAB19B /* SearchRouter.swift */; };
+		F9D7B0E12594BA6300FAB19B /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0DB2594BA6300FAB19B /* SearchModels.swift */; };
+		F9D7B0E22594BA6300FAB19B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0DC2594BA6300FAB19B /* SearchViewController.swift */; };
+		F9D7B0E32594BA6300FAB19B /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0DD2594BA6300FAB19B /* SearchInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,12 +89,24 @@
 		F9A8875A25949065008099EC /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		F9A8876225949074008099EC /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F9C8C54D4EB3AE51D7DD95FB /* Pods_InstaClone_InstaCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaClone_InstaCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9D7B082259499E300FAB19B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		F9D7B083259499E300FAB19B /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		F9D7B084259499E300FAB19B /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		F9D7B085259499E300FAB19B /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		F9D7B086259499E300FAB19B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F9D7B087259499E300FAB19B /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		F9D7B09125949F9C00FAB19B /* NetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
+		F9D7B09F2594A91E00FAB19B /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		F9D7B0AD2594ABF800FAB19B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F9D7B0B52594B45300FAB19B /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
+		F9D7B0BB2594B52A00FAB19B /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		F9D7B0C32594B5D200FAB19B /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		F9D7B0C82594B62E00FAB19B /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		F9D7B0CD2594B65500FAB19B /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		F9D7B0D22594B67A00FAB19B /* BaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWorker.swift; sourceTree = "<group>"; };
+		F9D7B0D82594BA6300FAB19B /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		F9D7B0DA2594BA6300FAB19B /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		F9D7B0DB2594BA6300FAB19B /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
+		F9D7B0DC2594BA6300FAB19B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F9D7B0DD2594BA6300FAB19B /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,7 +275,9 @@
 		F9140333259368C20073BEDE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F9D7B0AD2594ABF800FAB19B /* MainViewController.swift */,
 				F9A8873425948E27008099EC /* Home */,
+				F9D7B0D72594BA2700FAB19B /* Search */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -259,6 +285,7 @@
 		F914039725936DBA0073BEDE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F9D7B0BA2594B51E00FAB19B /* Utilities */,
 				F914039825936DC50073BEDE /* Bases */,
 				F9A8872125948B06008099EC /* Extensions */,
 			);
@@ -269,6 +296,11 @@
 			isa = PBXGroup;
 			children = (
 				F914039925936DD50073BEDE /* BaseASViewController.swift */,
+				F9D7B0C32594B5D200FAB19B /* BaseInteractor.swift */,
+				F9D7B0C82594B62E00FAB19B /* BasePresenter.swift */,
+				F9D7B0CD2594B65500FAB19B /* BaseRouter.swift */,
+				F9D7B0D22594B67A00FAB19B /* BaseWorker.swift */,
+				F9D7B0B52594B45300FAB19B /* BaseNode.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -276,6 +308,7 @@
 		F94C04452594871200EDE959 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				F9D7B09125949F9C00FAB19B /* NetworkWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -311,14 +344,33 @@
 		F9A8873425948E27008099EC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F9D7B082259499E300FAB19B /* HomePresenter.swift */,
-				F9D7B083259499E300FAB19B /* HomeWorker.swift */,
 				F9D7B084259499E300FAB19B /* HomeRouter.swift */,
 				F9D7B085259499E300FAB19B /* HomeModels.swift */,
 				F9D7B086259499E300FAB19B /* HomeViewController.swift */,
 				F9D7B087259499E300FAB19B /* HomeInteractor.swift */,
+				F9D7B09F2594A91E00FAB19B /* HomePresenter.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		F9D7B0BA2594B51E00FAB19B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F9D7B0BB2594B52A00FAB19B /* Logging.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F9D7B0D72594BA2700FAB19B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F9D7B0DA2594BA6300FAB19B /* SearchRouter.swift */,
+				F9D7B0DB2594BA6300FAB19B /* SearchModels.swift */,
+				F9D7B0DC2594BA6300FAB19B /* SearchViewController.swift */,
+				F9D7B0DD2594BA6300FAB19B /* SearchInteractor.swift */,
+				F9D7B0D82594BA6300FAB19B /* SearchPresenter.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,16 +611,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F914034A25936B3F0073BEDE /* AppResolver.swift in Sources */,
+				F9D7B0E02594BA6300FAB19B /* SearchRouter.swift in Sources */,
+				F9D7B0C92594B62E00FAB19B /* BasePresenter.swift in Sources */,
+				F9D7B0E22594BA6300FAB19B /* SearchViewController.swift in Sources */,
+				F9D7B0DE2594BA6300FAB19B /* SearchPresenter.swift in Sources */,
 				F9D7B08A259499E300FAB19B /* HomeRouter.swift in Sources */,
+				F9D7B0E32594BA6300FAB19B /* SearchInteractor.swift in Sources */,
+				F9D7B09225949F9C00FAB19B /* NetworkWorker.swift in Sources */,
+				F9D7B0C42594B5D200FAB19B /* BaseInteractor.swift in Sources */,
 				F9A8875B25949065008099EC /* Feed.swift in Sources */,
 				F9D7B08D259499E300FAB19B /* HomeInteractor.swift in Sources */,
 				F9A8873025948C17008099EC /* Home.swift in Sources */,
-				F9D7B088259499E300FAB19B /* HomePresenter.swift in Sources */,
 				F9D7B08C259499E300FAB19B /* HomeViewController.swift in Sources */,
-				F9D7B089259499E300FAB19B /* HomeWorker.swift in Sources */,
+				F9D7B0BC2594B52A00FAB19B /* Logging.swift in Sources */,
+				F9D7B0B62594B45300FAB19B /* BaseNode.swift in Sources */,
 				F9A8872425948B4C008099EC /* UIViewController+Rx.swift in Sources */,
+				F9D7B0D32594B67A00FAB19B /* BaseWorker.swift in Sources */,
 				F9A8875025949057008099EC /* Story.swift in Sources */,
+				F9D7B0AE2594ABF800FAB19B /* MainViewController.swift in Sources */,
+				F9D7B0A02594A91E00FAB19B /* HomePresenter.swift in Sources */,
+				F9D7B0E12594BA6300FAB19B /* SearchModels.swift in Sources */,
 				F9A8876325949074008099EC /* Comment.swift in Sources */,
+				F9D7B0CE2594B65500FAB19B /* BaseRouter.swift in Sources */,
 				F9A8874B2594903D008099EC /* User.swift in Sources */,
 				F91402BD25935A4C0073BEDE /* AppDelegate.swift in Sources */,
 				F914039A25936DD50073BEDE /* BaseASViewController.swift in Sources */,

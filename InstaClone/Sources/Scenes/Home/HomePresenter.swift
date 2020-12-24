@@ -11,13 +11,10 @@ protocol HomePresentationLogic: class {
   
 }
 
-final class HomePresenter {
+final class HomePresenter: BasePresenter {
   
   weak var view: HomeDisplayLogic?
   
-  deinit {
-    debugPrint("DEINIT: HomePresenter")
-  }
 }
 
 
