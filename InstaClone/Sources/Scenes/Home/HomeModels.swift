@@ -7,18 +7,18 @@
 
 enum HomeModels {
 
-  enum Model {
-
+  enum FetchHome {
     struct Request {
 
     }
-
     struct Response {
-
+      let home: Home
     }
 
     struct ViewModel {
-
+      let user: User
+      let stories: [Story]
+      let feeds: [Feed]
     }
   }
 }

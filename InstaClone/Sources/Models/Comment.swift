@@ -8,8 +8,8 @@
 import Foundation
 
 struct Comment: Codable {
-  let text: String
-  let user: User
+  let text: String?
+  let user: User?
   
   enum CodingKeys: String, CodingKey{
     case user

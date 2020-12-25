@@ -8,7 +8,7 @@
 import AsyncDisplayKit
 
 protocol HomeDisplayLogic: class {
-
+  func displayFetchedHome(viewModel: HomeModels.FetchHome.ViewModel)
 }
 
 final class HomeViewController: BaseASViewController {
@@ -35,11 +35,24 @@ final class HomeViewController: BaseASViewController {
     router.viewController = viewController
     router.dataStore = interactor
   }
+  
+  override func sendRequest() {
+    super.sendRequest()
+    rx.viewDidLoad
+      .subscribe(onNext: { [weak self] in
+        
+        self?.interactor?.fetchHome(request: .init())
+      }).disposed(by: disposeBag)
+  }
 }
 
 
 // MARK: - Display Logic
 
 extension HomeViewController: HomeDisplayLogic {
-
+  func displayFetchedHome(viewModel: HomeModels.FetchHome.ViewModel) {
+    //Do display
+    //user, stories, feeds
+    Log.debug("Display")
+  }
 }

@@ -14,6 +14,7 @@ struct Feed: Codable {
   let likes: Int
   let lastComment: Comment
   let id: Int
+  let dateAdded: Bool?
   
   enum CodingKeys: String, CodingKey{
     case user
@@ -22,5 +23,6 @@ struct Feed: Codable {
     case aspectRatio = "aspect_ratio"
     case lastComment = "last_comment"
     case id = "post_id"
+    case dateAdded
   }
 }

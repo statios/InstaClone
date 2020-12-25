@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomePresentationLogic: class {
-  
+  func presentFetchedHome(response: HomeModels.FetchHome.Response)
 }
 
 final class HomePresenter: BasePresenter {
@@ -21,5 +21,13 @@ final class HomePresenter: BasePresenter {
 // MARK: - Presentation Logic
 
 extension HomePresenter: HomePresentationLogic {
-  
+  func presentFetchedHome(response: HomeModels.FetchHome.Response) {
+    view?.displayFetchedHome(
+      viewModel: .init(
+        user: response.home.user,
+        stories: response.home.stories,
+        feeds: response.home.feeds
+      )
+    )
+  }
 }

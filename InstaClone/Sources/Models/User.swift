@@ -10,11 +10,11 @@ import Foundation
 struct User: Codable {
   let id: Int
   let username: String
-  let profileImage: String?
+  let profileImageURL: String
   
   enum CodingKeys: String, CodingKey {
     case id = "user_id"
     case username
-    case profileImage = "profile_image_url"
+    case profileImageURL = "profile_image_url"
   }
 }

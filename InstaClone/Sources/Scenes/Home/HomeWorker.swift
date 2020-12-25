@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeWorkerLogic {
-
+  
 }
 
 final class HomeWorker: BaseWorker, HomeWorkerLogic {

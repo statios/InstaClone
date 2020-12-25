@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeBusinessLogic: class {
-
+  func fetchHome(request: HomeModels.FetchHome.Request)
 }
 
 protocol HomeDataStore: class {
@@ -26,5 +26,10 @@ final class HomeInteractor: BaseInteractor, HomeDataStore {
 // MARK: - Business Logic
 
 extension HomeInteractor: HomeBusinessLogic {
-
+  func fetchHome(request: HomeModels.FetchHome.Request) {
+    
+    NetworkingService().request(to: .home, type: Home.self) { [weak self] home in
+      self?.presenter?.presentFetchedHome(response: .init(home: home))
+    }
+  }
 }
