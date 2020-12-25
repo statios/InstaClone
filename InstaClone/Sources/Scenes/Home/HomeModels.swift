@@ -2,12 +2,12 @@
 //  HomeModels.swift
 //  InstaClone
 //
-//  Created by KIHYUN SO on 2020/12/24.
+//  Created by KIHYUN SO on 2020/12/26.
 //
 
 enum HomeModels {
 
-  enum Home {
+  enum Model {
 
     struct Request {
 

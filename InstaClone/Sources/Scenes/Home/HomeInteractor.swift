@@ -2,13 +2,13 @@
 //  HomeInteractor.swift
 //  InstaClone
 //
-//  Created by KIHYUN SO on 2020/12/24.
+//  Created by KIHYUN SO on 2020/12/26.
 //
 
 import Foundation
 
 protocol HomeBusinessLogic: class {
-  
+
 }
 
 protocol HomeDataStore: class {

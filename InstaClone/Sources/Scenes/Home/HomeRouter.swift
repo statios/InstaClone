@@ -2,25 +2,25 @@
 //  HomeRouter.swift
 //  InstaClone
 //
-//  Created by KIHYUN SO on 2020/12/24.
+//  Created by KIHYUN SO on 2020/12/26.
 //
 
 import UIKit
 
 protocol HomeRoutingLogic: class {
-  
+
 }
 
 protocol HomeDataPassing: class {
 
-  var dataStore: HomeDataStore { get set }
+  var dataStore: HomeDataStore? { get set }
 }
 
 final class HomeRouter: BaseRouter, HomeDataPassing {
 
   weak var viewController: HomeViewController?
-  var dataStore: HomeDataStore
-  
+  var dataStore: HomeDataStore?
+
 }
 
 
