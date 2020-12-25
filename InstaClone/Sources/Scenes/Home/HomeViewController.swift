@@ -6,36 +6,32 @@
 //
 
 import AsyncDisplayKit
-import Resolver
-import RxSwift
-import RxCocoa
 
 protocol HomeDisplayLogic: class {
-  func displayUpdateHome(viewModel: Driver<HomeModels.Home.ViewModel>)
 }
 
 final class HomeViewController: BaseASViewController {
   
   // MARK: VIP
   
-  @Injected var router: (HomeRoutingLogic & HomeDataPassing)
-  @Injected var interactor: HomeBusinessLogic
+  var router: (HomeRoutingLogic & HomeDataPassing)?
+  var interactor: HomeBusinessLogic?
 
   // MARK: Configuring
   
   override func configure() {
     super.configure()
-    if let router = router as? HomeRouter,
-       let interactor = interactor as? HomeInteractor,
-       let presenter = interactor.presenter as? HomePresenter {
-      router.viewController = self
-      presenter.view = self
-    }
-  }
-  
-  override func setupBinding() {
-    super.setupBinding()
-    interactor.home(request: rx.viewDidLoad.map { HomeModels.Home.Request() })
+    let viewController = self
+    let interactor = HomeInteractor()
+    let presenter = HomePresenter()
+    let router = HomeRouter()
+    
+    viewController.interactor = interactor
+    viewController.router = router
+    interactor.presenter = presenter
+    presenter.view = viewController
+    router.viewController = viewController
+    router.dataStore = interactor
   }
   
 }
@@ -44,10 +40,4 @@ final class HomeViewController: BaseASViewController {
 // MARK: - Display Logic
 
 extension HomeViewController: HomeDisplayLogic {
-  func displayUpdateHome(viewModel: Driver<HomeModels.Home.ViewModel>) {
-    viewModel
-      .debug()
-      .drive()
-      .disposed(by: disposeBag)
-  }
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Resolver
 
 protocol HomeRoutingLogic: class {
   
@@ -20,7 +19,7 @@ protocol HomeDataPassing: class {
 final class HomeRouter: BaseRouter, HomeDataPassing {
 
   weak var viewController: HomeViewController?
-  @Injected var dataStore: HomeDataStore
+  var dataStore: HomeDataStore
   
 }
 

@@ -6,11 +6,9 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 protocol HomePresentationLogic: class {
-  func presentHome(response: Single<HomeModels.Home.Response>)
+  
 }
 
 final class HomePresenter: BasePresenter {
@@ -23,10 +21,5 @@ final class HomePresenter: BasePresenter {
 // MARK: - Presentation Logic
 
 extension HomePresenter: HomePresentationLogic {
-  func presentHome(response: Single<HomeModels.Home.Response>) {
-    let viewModel = response
-      .map { _ in HomeModels.Home.ViewModel() }
-      .asDriver(onErrorJustReturn: HomeModels.Home.ViewModel() )
-    view?.displayUpdateHome(viewModel: viewModel)
-  }
+
 }
