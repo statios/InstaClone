@@ -7,9 +7,11 @@
 
 import AsyncDisplayKit
 import Resolver
+import RxSwift
+import RxCocoa
 
 protocol HomeDisplayLogic: class {
-  
+  func displayUpdateHome(viewModel: Driver<HomeModels.Home.ViewModel>)
 }
 
 final class HomeViewController: BaseASViewController {
@@ -30,11 +32,22 @@ final class HomeViewController: BaseASViewController {
       presenter.view = self
     }
   }
+  
+  override func setupBinding() {
+    super.setupBinding()
+    interactor.home(request: rx.viewDidLoad.map { HomeModels.Home.Request() })
+  }
+  
 }
 
 
 // MARK: - Display Logic
 
 extension HomeViewController: HomeDisplayLogic {
-  
+  func displayUpdateHome(viewModel: Driver<HomeModels.Home.ViewModel>) {
+    viewModel
+      .debug()
+      .drive()
+      .disposed(by: disposeBag)
+  }
 }

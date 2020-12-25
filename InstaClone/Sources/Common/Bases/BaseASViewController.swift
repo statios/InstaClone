@@ -6,11 +6,17 @@
 //
 
 import AsyncDisplayKit
+import RxSwift
 
 class BaseASViewController: ASDKViewController<BaseNode> {
+  
+  var disposeBag = DisposeBag()
+  
   override init() {
     super.init(node: BaseNode())
     Log.verbose(String(describing: Self.self))
+    configure()
+    setupBinding()
   }
   
   deinit {
@@ -22,6 +28,10 @@ class BaseASViewController: ASDKViewController<BaseNode> {
   }
   
   @objc func configure() {
+    
+  }
+  
+  @objc func setupBinding() {
     
   }
 }

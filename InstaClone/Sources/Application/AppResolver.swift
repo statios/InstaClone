@@ -24,9 +24,15 @@ extension AppResolver {
     Resolver.register { HomeInteractor() }
       .implements(HomeDataStore.self)
       .scope(Resolver.shared)
+    #if DEBUG
+    Resolver.register { StubNetworkWorker() }
+      .implements(NetworkWorkerLogic.self)
+      .scope(Resolver.application)
+    #else
     Resolver.register { NetworkWorker() }
       .implements(NetworkWorkerLogic.self)
       .scope(Resolver.application)
+    #endif
     Resolver.register { HomePresenter() }
       .implements(HomePresentationLogic.self)
   }

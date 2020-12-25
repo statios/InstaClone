@@ -10,18 +10,33 @@ import Moya
 import RxSwift
 
 protocol NetworkWorkerLogic {
-  associatedtype API: TargetType
-  var provider: NetworkProvider<API> { get }
+  var provider: NetworkProvider<InstaCloneAPI> { get }
   func request<T: Codable>(
-    to router: API,
+    to router: InstaCloneAPI,
     type: T.Type
   ) -> Single<T>
 }
 
-final class NetworkWorker: BaseWorker {
-  var provider: NetworkProvider<API>
+extension NetworkWorkerLogic {
+  func request<T: Codable>(
+    to router: InstaCloneAPI,
+    type: T.Type
+  ) -> Single<T> {
+    return provider.rx.request(router)
+      .map(T.self)
+  }
 }
 
-extension NetworkWorker: NetworkWorkerLogic {
-  
+final class NetworkWorker: BaseWorker {
+  let provider = NetworkProvider<InstaCloneAPI>()
 }
+
+extension NetworkWorker: NetworkWorkerLogic { }
+
+final class StubNetworkWorker: BaseWorker {
+  let provider = NetworkProvider<InstaCloneAPI>(
+    stubClosure: MoyaProvider.immediatelyStub
+  )
+}
+
+extension StubNetworkWorker: NetworkWorkerLogic { }

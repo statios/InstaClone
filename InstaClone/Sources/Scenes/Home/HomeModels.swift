@@ -7,7 +7,7 @@
 
 enum HomeModels {
 
-  enum Model {
+  enum Home {
 
     struct Request {
 

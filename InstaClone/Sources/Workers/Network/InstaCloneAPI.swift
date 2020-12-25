@@ -31,7 +31,7 @@ extension InstaCloneAPI: TargetType {
   
   var sampleData: Data {
     switch self {
-    case .home: return Data()
+    case .home: return getSampleData(name: "HomeSample")
     }
   }
   
@@ -43,5 +43,15 @@ extension InstaCloneAPI: TargetType {
   
   var headers: [String: String]? {
     return [:]
+  }
+}
+
+// Helpers
+extension InstaCloneAPI {
+  private func getSampleData(name: String?) -> Data {
+    guard let path = Bundle.main.path(forResource: name, ofType: "json") else { return Data() }
+    let url = URL(fileURLWithPath: path)
+    guard let data = try? Data(contentsOf: url) else { return Data() }
+    return data
   }
 }
