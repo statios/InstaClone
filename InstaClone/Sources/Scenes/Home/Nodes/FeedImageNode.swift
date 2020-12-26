@@ -20,7 +20,6 @@ class FeedImageNode: BaseNode {
   }
   
   func configure(feed: Feed?) {
-    print(feed?.imageURL)
     imageNode.url = URL(string: feed?.imageURL ?? "")
     imageNode.style.preferredSize.height = Device.width * CGFloat(feed?.aspectRatio ?? 1.0)
   }
