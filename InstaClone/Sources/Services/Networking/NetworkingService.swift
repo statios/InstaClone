@@ -17,19 +17,19 @@ extension NetworkingServiceType {
   func request<T: Codable>(
     to router: InstaCloneAPI,
     type: T.Type,
-    completion: @escaping (T) -> Void
+    completion: @escaping (T?, Error?) -> Void
   ) {
     provider.request(router) { result in
       switch result {
       case let .success(response):
         do {
           let decoded = try JSONDecoder().decode(type, from: response.data)
-          completion(decoded)
+          completion(decoded, nil)
         } catch let error {
-          Log.error(error)
+          completion(nil, error)
         }
       case let .failure(error):
-        break
+        completion(nil, error)
       }
     }
   }

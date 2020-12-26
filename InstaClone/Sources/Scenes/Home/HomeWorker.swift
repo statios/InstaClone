@@ -9,7 +9,7 @@ import Foundation
 import Resolver
 
 protocol HomeWorkerLogic {
-  func requestHome(completion: @escaping (Home) -> Void)
+  func requestHome(completion: @escaping (Home?, Error?) -> Void)
 }
 
 final class HomeWorker: BaseWorker {
@@ -19,9 +19,9 @@ final class HomeWorker: BaseWorker {
 }
 
 extension HomeWorker: HomeWorkerLogic {
-  func requestHome(completion: @escaping (Home) -> Void) {
-    networkingService.request(to: .home, type: Home.self) { home in
-      completion(home)
+  func requestHome(completion: @escaping (Home?, Error?) -> Void) {
+    networkingService.request(to: .home, type: Home.self) { (home, error) in
+      completion(home, error)
     }
   }
 }

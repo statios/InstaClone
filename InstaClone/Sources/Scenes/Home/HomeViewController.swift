@@ -50,6 +50,19 @@ final class HomeViewController: BaseASViewController {
 
 extension HomeViewController: HomeDisplayLogic {
   func displayFetchedHome(viewModel: HomeModels.FetchHome.ViewModel) {
-    Log.debug("Display")
+    if let user = viewModel.user {
+      //do display about user
+    }
+    if let stories = viewModel.stories {
+      //do display about stories
+    }
+    if let feeds = viewModel.feeds {
+      //do display about feeds
+      Log.error(feeds.count)
+    }
+    if let errorMessage = viewModel.errorMessage {
+      //show alert
+      Log.error("error occur")
+    }
   }
 }

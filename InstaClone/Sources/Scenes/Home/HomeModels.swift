@@ -12,13 +12,15 @@ enum HomeModels {
 
     }
     struct Response {
-      let home: Home
+      let home: Home?
+      let error: Error?
     }
 
     struct ViewModel {
-      let user: User
-      let stories: [Story]
-      let feeds: [Feed]
+      let user: User?
+      let stories: [Story]?
+      let feeds: [Feed]?
+      let errorMessage: String?
     }
   }
 }

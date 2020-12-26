@@ -27,8 +27,10 @@ final class HomeInteractor: BaseInteractor, HomeDataStore {
 
 extension HomeInteractor: HomeBusinessLogic {
   func fetchHome(request: HomeModels.FetchHome.Request) {
-    worker?.requestHome { [weak self] home in
-      self?.presenter?.presentFetchedHome(response: .init(home: home))
+    worker?.requestHome { [weak self] (home, error) in
+      self?.presenter?.presentFetchedHome(
+        response: .init(home: home, error: error)
+      )
     }
   }
 }
