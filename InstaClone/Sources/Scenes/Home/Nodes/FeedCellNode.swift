@@ -9,15 +9,17 @@ import AsyncDisplayKit
 
 class FeedCellNode: ASCellNode {
   
-  private let feedHeaderNode = FeedHeaderNode()
+  private let feedTopNode = FeedTopNode()
   private let feedImageNode = FeedImageNode()
+  private let feedMidNode = FeedMidNode()
   
   init(feed: Feed?) {
     super.init()
     automaticallyManagesSubnodes = true
     selectionStyle = .none
-    feedHeaderNode.configure(feed: feed)
+    feedTopNode.configure(feed: feed)
     feedImageNode.configure(feed: feed)
+    feedMidNode.configure(feed: feed)
   }
   
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -26,7 +28,7 @@ class FeedCellNode: ASCellNode {
       spacing: 0,
       justifyContent: .start,
       alignItems: .stretch,
-      children: [feedHeaderNode, feedImageNode]
+      children: [feedTopNode, feedImageNode, feedMidNode]
     )
   }
 }

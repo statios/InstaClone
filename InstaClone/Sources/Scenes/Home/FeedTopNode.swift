@@ -7,7 +7,7 @@
 
 import AsyncDisplayKit
 
-class FeedHeaderNode: BaseNode {
+class FeedTopNode: BaseNode {
   
   fileprivate struct Metric {
     static let profileImageSize: CGSize = .init(width: 35, height: 35)
@@ -18,8 +18,11 @@ class FeedHeaderNode: BaseNode {
     $0.cornerRoundingType = .precomposited
     $0.cornerRadius = Metric.profileImageSize.width / 2.0
     $0.style.preferredSize = Metric.profileImageSize
+    $0.backgroundColor = .red
   }
-  private let nameTextNode = ASTextNode()
+  private let nameTextNode = ASTextNode().then {
+    $0.backgroundColor = .blue
+  }
   private let moreButtonNode = ASButtonNode().then {
     $0.setImage(Image.Icon.elipse, for: .normal)
     $0.style.preferredSize = Metric.moreButtonSize
@@ -27,7 +30,6 @@ class FeedHeaderNode: BaseNode {
   
   override init() {
     super.init()
-    
   }
   
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

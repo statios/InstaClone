@@ -6,16 +6,13 @@
 //
 
 enum HomeModels {
-
+  
   enum FetchHome {
-    struct Request {
-
-    }
+    struct Request { }
     struct Response {
       let home: Home?
       let error: Error?
     }
-
     struct ViewModel {
       let user: User
       let stories: [Story]

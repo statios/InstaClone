@@ -23,6 +23,7 @@
 		F9A8875B25949065008099EC /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A8875A25949065008099EC /* Feed.swift */; };
 		F9A8876325949074008099EC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A8876225949074008099EC /* Comment.swift */; };
 		F9CB42AF259776CA0072997D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB42AE259776CA0072997D /* Image.swift */; };
+		F9CB42B7259781DC0072997D /* FeedMidNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB42B6259781DC0072997D /* FeedMidNode.swift */; };
 		F9D7B0AE2594ABF800FAB19B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0AD2594ABF800FAB19B /* MainViewController.swift */; };
 		F9D7B0B62594B45300FAB19B /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0B52594B45300FAB19B /* BaseNode.swift */; };
 		F9D7B0BC2594B52A00FAB19B /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0BB2594B52A00FAB19B /* Logging.swift */; };
@@ -47,7 +48,7 @@
 		F9D7B14B25972F9700FAB19B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B14A25972F9700FAB19B /* Device.swift */; };
 		F9D7B1532597389700FAB19B /* FeedCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B1522597389600FAB19B /* FeedCellNode.swift */; };
 		F9D7B15B259738A100FAB19B /* FeedImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B15A259738A100FAB19B /* FeedImageNode.swift */; };
-		F9D7B16325973B0300FAB19B /* FeedHeaderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B16225973B0300FAB19B /* FeedHeaderNode.swift */; };
+		F9D7B16325973B0300FAB19B /* FeedTopNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B16225973B0300FAB19B /* FeedTopNode.swift */; };
 		F9D7B1742597716000FAB19B /* NetworkingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B1732597716000FAB19B /* NetworkingWorker.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		F9A8876225949074008099EC /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F9C8C54D4EB3AE51D7DD95FB /* Pods_InstaClone_InstaCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaClone_InstaCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CB42AE259776CA0072997D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		F9CB42B6259781DC0072997D /* FeedMidNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMidNode.swift; sourceTree = "<group>"; };
 		F9D7B0AD2594ABF800FAB19B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F9D7B0B52594B45300FAB19B /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
 		F9D7B0BB2594B52A00FAB19B /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
@@ -121,7 +123,7 @@
 		F9D7B14A25972F9700FAB19B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		F9D7B1522597389600FAB19B /* FeedCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCellNode.swift; path = Nodes/FeedCellNode.swift; sourceTree = "<group>"; };
 		F9D7B15A259738A100FAB19B /* FeedImageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedImageNode.swift; path = Nodes/FeedImageNode.swift; sourceTree = "<group>"; };
-		F9D7B16225973B0300FAB19B /* FeedHeaderNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderNode.swift; sourceTree = "<group>"; };
+		F9D7B16225973B0300FAB19B /* FeedTopNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTopNode.swift; sourceTree = "<group>"; };
 		F9D7B1732597716000FAB19B /* NetworkingWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -413,9 +415,10 @@
 		F9D7B13B25972D0700FAB19B /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				F9D7B16225973B0300FAB19B /* FeedHeaderNode.swift */,
 				F9D7B1522597389600FAB19B /* FeedCellNode.swift */,
+				F9D7B16225973B0300FAB19B /* FeedTopNode.swift */,
 				F9D7B15A259738A100FAB19B /* FeedImageNode.swift */,
+				F9CB42B6259781DC0072997D /* FeedMidNode.swift */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -690,8 +693,9 @@
 				F9D7B0B62594B45300FAB19B /* BaseNode.swift in Sources */,
 				F9A8872425948B4C008099EC /* UIViewController+Rx.swift in Sources */,
 				F9D7B0D32594B67A00FAB19B /* BaseWorker.swift in Sources */,
-				F9D7B16325973B0300FAB19B /* FeedHeaderNode.swift in Sources */,
+				F9D7B16325973B0300FAB19B /* FeedTopNode.swift in Sources */,
 				F9A8875025949057008099EC /* Story.swift in Sources */,
+				F9CB42B7259781DC0072997D /* FeedMidNode.swift in Sources */,
 				F9D7B0F82594BD5A00FAB19B /* InstaCloneAPI.swift in Sources */,
 				F9D7B0AE2594ABF800FAB19B /* MainViewController.swift in Sources */,
 				F9D7B0E12594BA6300FAB19B /* SearchModels.swift in Sources */,

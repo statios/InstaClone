@@ -24,11 +24,7 @@ extension HomePresenter: HomePresentationLogic {
   func presentFetchedHome(response: HomeModels.FetchHome.Response) {
     if let home = response.home {
       view?.displayFetchedHome(
-        viewModel: .init(
-          user: home.user,
-          stories: home.stories,
-          feeds: home.feeds
-        )
+        viewModel: .init(user: home.user, stories: home.stories, feeds: home.feeds)
       )
     }
     if let error = response.error {
