@@ -16,7 +16,13 @@ class BaseASViewController: ASDKViewController<BaseNode> {
     super.init(node: BaseNode())
     Log.verbose(String(describing: Self.self))
     configure()
+    setupUI()
     sendRequest()
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
   }
   
   deinit {
@@ -27,11 +33,15 @@ class BaseASViewController: ASDKViewController<BaseNode> {
     fatalError("init(coder:) has not been implemented")
   }
   
-  @objc func configure() {
+  @objc dynamic func configure() {
     
   }
   
-  @objc func sendRequest() {
+  @objc dynamic func sendRequest() {
+    
+  }
+  
+  @objc dynamic func setupUI() {
     
   }
 }

@@ -46,6 +46,9 @@
 		F9D7B11F2596411100FAB19B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B1192596411100FAB19B /* HomeViewController.swift */; };
 		F9D7B1202596411100FAB19B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B11A2596411100FAB19B /* HomeInteractor.swift */; };
 		F9D7B13725971ECF00FAB19B /* AppResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B13625971ECF00FAB19B /* AppResolver.swift */; };
+		F9D7B13D25972D0F00FAB19B /* FeedCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B13C25972D0F00FAB19B /* FeedCellNode.swift */; };
+		F9D7B14525972F2900FAB19B /* FeedImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B14425972F2900FAB19B /* FeedImageNode.swift */; };
+		F9D7B14B25972F9700FAB19B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B14A25972F9700FAB19B /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,9 @@
 		F9D7B1192596411100FAB19B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F9D7B11A2596411100FAB19B /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		F9D7B13625971ECF00FAB19B /* AppResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResolver.swift; sourceTree = "<group>"; };
+		F9D7B13C25972D0F00FAB19B /* FeedCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellNode.swift; sourceTree = "<group>"; };
+		F9D7B14425972F2900FAB19B /* FeedImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageNode.swift; sourceTree = "<group>"; };
+		F9D7B14A25972F9700FAB19B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +302,7 @@
 		F914039725936DBA0073BEDE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F9D7B14925972F9000FAB19B /* Constants */,
 				F9D7B0BA2594B51E00FAB19B /* Utilities */,
 				F914039825936DC50073BEDE /* Bases */,
 				F9A8872125948B06008099EC /* Extensions */,
@@ -361,6 +368,7 @@
 				F9D7B1162596411100FAB19B /* HomeWorker.swift */,
 				F9D7B1172596411100FAB19B /* HomeRouter.swift */,
 				F9D7B1182596411100FAB19B /* HomeModels.swift */,
+				F9D7B13B25972D0700FAB19B /* Nodes */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -402,6 +410,23 @@
 				F9D7B1002594DE5800FAB19B /* HomeSample.json */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		F9D7B13B25972D0700FAB19B /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F9D7B13C25972D0F00FAB19B /* FeedCellNode.swift */,
+				F9D7B14425972F2900FAB19B /* FeedImageNode.swift */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		F9D7B14925972F9000FAB19B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F9D7B14A25972F9700FAB19B /* Device.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -645,10 +670,12 @@
 				F9D7B0E02594BA6300FAB19B /* SearchRouter.swift in Sources */,
 				F9D7B10925958D5C00FAB19B /* NetworkProvider.swift in Sources */,
 				F9D7B13725971ECF00FAB19B /* AppResolver.swift in Sources */,
+				F9D7B14B25972F9700FAB19B /* Device.swift in Sources */,
 				F9D7B0C92594B62E00FAB19B /* BasePresenter.swift in Sources */,
 				F9D7B0E22594BA6300FAB19B /* SearchViewController.swift in Sources */,
 				F9D7B11F2596411100FAB19B /* HomeViewController.swift in Sources */,
 				F9D7B11E2596411100FAB19B /* HomeModels.swift in Sources */,
+				F9D7B13D25972D0F00FAB19B /* FeedCellNode.swift in Sources */,
 				F9D7B0DE2594BA6300FAB19B /* SearchPresenter.swift in Sources */,
 				F9D7B10E25958D8B00FAB19B /* NetworkLoggerPlugin.swift in Sources */,
 				F9D7B0E32594BA6300FAB19B /* SearchInteractor.swift in Sources */,
@@ -661,6 +688,7 @@
 				F9A8873025948C17008099EC /* Home.swift in Sources */,
 				F9D7B0BC2594B52A00FAB19B /* Logging.swift in Sources */,
 				F9D7B0B62594B45300FAB19B /* BaseNode.swift in Sources */,
+				F9D7B14525972F2900FAB19B /* FeedImageNode.swift in Sources */,
 				F9A8872425948B4C008099EC /* UIViewController+Rx.swift in Sources */,
 				F9D7B0D32594B67A00FAB19B /* BaseWorker.swift in Sources */,
 				F9A8875025949057008099EC /* Story.swift in Sources */,

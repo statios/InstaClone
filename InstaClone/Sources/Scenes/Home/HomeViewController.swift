@@ -17,9 +17,21 @@ final class HomeViewController: BaseASViewController {
 
   var router: (HomeRoutingLogic & HomeDataPassing)?
   var interactor: HomeBusinessLogic?
-
-  // MARK: Configuring
   
+  // MARK: DataStore
+  
+  var displayedFeeds: [Feed] = []
+  
+  // MARK: Nodes
+  
+  private lazy var tableNode = ASTableNode().then {
+    $0.dataSource = self
+  }
+}
+
+// MARK: - Configuring
+
+extension HomeViewController {
   override func configure() {
     super.configure()
     let viewController = self
@@ -35,7 +47,25 @@ final class HomeViewController: BaseASViewController {
     router.viewController = viewController
     router.dataStore = interactor
   }
-  
+}
+
+// MARK: - Setup UI
+
+extension HomeViewController {
+  override func setupUI() {
+    super.setupUI()
+    Log.warning("setupUI")
+    node.addSubnode(tableNode)
+    node.layoutSpecBlock = { (node, constrainedSize) in
+      Log.warning("node.layoutSpecBlock")
+      return ASInsetLayoutSpec(insets: .zero, child: self.tableNode)
+    }
+  }
+}
+
+// MARK: - Send Request
+
+extension HomeViewController {
   override func sendRequest() {
     super.sendRequest()
     rx.viewDidLoad
@@ -44,7 +74,6 @@ final class HomeViewController: BaseASViewController {
       }).disposed(by: disposeBag)
   }
 }
-
 
 // MARK: - Display Logic
 
@@ -58,11 +87,28 @@ extension HomeViewController: HomeDisplayLogic {
     }
     if let feeds = viewModel.feeds {
       //do display about feeds
-      Log.error(feeds.count)
+      self.displayedFeeds = feeds
+      self.tableNode.reloadData()
     }
     if let errorMessage = viewModel.errorMessage {
       //show alert
-      Log.error("error occur")
+      Log.error(errorMessage)
+    }
+  }
+}
+
+// MARK: - ASTableDataSource
+
+extension HomeViewController: ASTableDataSource {
+  func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
+    return displayedFeeds.count
+  }
+  
+  func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+    return { [weak self] in
+      let item = self?.displayedFeeds[indexPath.row]
+      let cell = FeedCellNode(feed: item)
+      return cell
     }
   }
 }
