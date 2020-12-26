@@ -40,7 +40,6 @@ final class HomeViewController: BaseASViewController {
     super.sendRequest()
     rx.viewDidLoad
       .subscribe(onNext: { [weak self] in
-        
         self?.interactor?.fetchHome(request: .init())
       }).disposed(by: disposeBag)
   }
@@ -51,8 +50,6 @@ final class HomeViewController: BaseASViewController {
 
 extension HomeViewController: HomeDisplayLogic {
   func displayFetchedHome(viewModel: HomeModels.FetchHome.ViewModel) {
-    //Do display
-    //user, stories, feeds
     Log.debug("Display")
   }
 }

@@ -14,12 +14,6 @@ protocol NetworkingServiceType {
 }
 
 extension NetworkingServiceType {
-}
-
-final class NetworkingService: NetworkingServiceType {
-  let provider = NetworkProvider<InstaCloneAPI>(
-    stubClosure: MoyaProvider.immediatelyStub
-  )
   func request<T: Codable>(
     to router: InstaCloneAPI,
     type: T.Type,
@@ -39,4 +33,10 @@ final class NetworkingService: NetworkingServiceType {
       }
     }
   }
+}
+
+final class NetworkingService: NetworkingServiceType {
+  let provider = NetworkProvider<InstaCloneAPI>(
+    stubClosure: MoyaProvider.immediatelyStub
+  )
 }

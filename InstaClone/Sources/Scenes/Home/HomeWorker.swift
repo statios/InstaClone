@@ -6,13 +6,22 @@
 //
 
 import Foundation
+import Resolver
 
 protocol HomeWorkerLogic {
+  func requestHome(completion: @escaping (Home) -> Void)
+}
+
+final class HomeWorker: BaseWorker {
+  
+  @Injected var networkingService: NetworkingServiceType
   
 }
 
-final class HomeWorker: BaseWorker, HomeWorkerLogic {
-  func doSomeWork() {
-
+extension HomeWorker: HomeWorkerLogic {
+  func requestHome(completion: @escaping (Home) -> Void) {
+    networkingService.request(to: .home, type: Home.self) { home in
+      completion(home)
+    }
   }
 }
