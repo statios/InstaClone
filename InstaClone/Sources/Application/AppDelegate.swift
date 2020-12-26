@@ -18,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-    AppResolver.registerAllServices()
-    
     window = UIWindow().then {
       $0.frame = UIScreen.main.bounds
       $0.backgroundColor = .white

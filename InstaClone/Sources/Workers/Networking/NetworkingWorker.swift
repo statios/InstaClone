@@ -1,19 +1,23 @@
 //
-//  NetworkWorker.swift
+//  NetworkingWorker.swift
 //  InstaClone
 //
-//  Created by KIHYUN SO on 2020/12/24.
+//  Created by KIHYUN SO on 2020/12/26.
 //
 
 import Foundation
 import Moya
-import RxSwift
 
-protocol NetworkingServiceType {
+protocol NetworkingWorkerLogic {
   var provider: NetworkProvider<InstaCloneAPI> { get }
+  func request<T: Codable>(
+    to router: InstaCloneAPI,
+    type: T.Type,
+    completion: @escaping (T?, Error?) -> Void
+  )
 }
 
-extension NetworkingServiceType {
+extension NetworkingWorkerLogic {
   func request<T: Codable>(
     to router: InstaCloneAPI,
     type: T.Type,
@@ -35,7 +39,7 @@ extension NetworkingServiceType {
   }
 }
 
-final class NetworkingService: NetworkingServiceType {
+final class NetworkingWorker: BaseWorker, NetworkingWorkerLogic {
   let provider = NetworkProvider<InstaCloneAPI>(
     stubClosure: MoyaProvider.immediatelyStub
   )

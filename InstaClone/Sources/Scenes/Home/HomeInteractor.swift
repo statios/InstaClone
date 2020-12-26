@@ -17,7 +17,7 @@ protocol HomeDataStore: class {
 
 final class HomeInteractor: BaseInteractor, HomeDataStore {
 
-  var worker: HomeWorkerLogic?
+  var networkingWorker: NetworkingWorkerLogic?
   var presenter: HomePresentationLogic?
 
 }
@@ -27,10 +27,9 @@ final class HomeInteractor: BaseInteractor, HomeDataStore {
 
 extension HomeInteractor: HomeBusinessLogic {
   func fetchHome(request: HomeModels.FetchHome.Request) {
-    worker?.requestHome { [weak self] (home, error) in
-      self?.presenter?.presentFetchedHome(
-        response: .init(home: home, error: error)
-      )
-    }
+    networkingWorker?
+      .request(to: .home, type: Home.self) { [weak self] (home, error) in
+        self?.presenter?.presentFetchedHome(response: .init(home: home, error: error))
+      }
   }
 }

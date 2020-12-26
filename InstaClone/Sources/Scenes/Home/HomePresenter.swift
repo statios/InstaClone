@@ -22,13 +22,19 @@ final class HomePresenter: BasePresenter {
 
 extension HomePresenter: HomePresentationLogic {
   func presentFetchedHome(response: HomeModels.FetchHome.Response) {
-    view?.displayFetchedHome(
-      viewModel: .init(
-        user: response.home?.user,
-        stories: response.home?.stories,
-        feeds: response.home?.feeds,
-        errorMessage: response.error?.localizedDescription
+    if let home = response.home {
+      view?.displayFetchedHome(
+        viewModel: .init(
+          user: home.user,
+          stories: home.stories,
+          feeds: home.feeds
+        )
       )
-    )
+    }
+    if let error = response.error {
+      view?.displayNetworkingError(
+        viewModel: .init(message: error.localizedDescription)
+      )
+    }
   }
 }

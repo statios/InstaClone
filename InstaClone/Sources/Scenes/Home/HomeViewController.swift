@@ -9,6 +9,7 @@ import AsyncDisplayKit
 
 protocol HomeDisplayLogic: class {
   func displayFetchedHome(viewModel: HomeModels.FetchHome.ViewModel)
+  func displayNetworkingError(viewModel: HomeModels.NetworkingError.ViewModel)
 }
 
 final class HomeViewController: BaseASViewController {
@@ -42,7 +43,7 @@ extension HomeViewController {
     viewController.interactor = interactor
     viewController.router = router
     interactor.presenter = presenter
-    interactor.worker = HomeWorker()
+    interactor.networkingWorker = NetworkingWorker()
     presenter.view = viewController
     router.viewController = viewController
     router.dataStore = interactor
@@ -54,10 +55,8 @@ extension HomeViewController {
 extension HomeViewController {
   override func setupUI() {
     super.setupUI()
-    Log.warning("setupUI")
     node.addSubnode(tableNode)
     node.layoutSpecBlock = { (node, constrainedSize) in
-      Log.warning("node.layoutSpecBlock")
       return ASInsetLayoutSpec(insets: .zero, child: self.tableNode)
     }
   }
@@ -68,8 +67,8 @@ extension HomeViewController {
 extension HomeViewController {
   override func sendRequest() {
     super.sendRequest()
-    rx.viewDidLoad
-      .subscribe(onNext: { [weak self] in
+    rx.viewWillAppear.take(1)
+      .subscribe(onNext: { [weak self] _ in
         self?.interactor?.fetchHome(request: .init())
       }).disposed(by: disposeBag)
   }
@@ -79,21 +78,11 @@ extension HomeViewController {
 
 extension HomeViewController: HomeDisplayLogic {
   func displayFetchedHome(viewModel: HomeModels.FetchHome.ViewModel) {
-    if let user = viewModel.user {
-      //do display about user
-    }
-    if let stories = viewModel.stories {
-      //do display about stories
-    }
-    if let feeds = viewModel.feeds {
-      //do display about feeds
-      self.displayedFeeds = feeds
-      self.tableNode.reloadData()
-    }
-    if let errorMessage = viewModel.errorMessage {
-      //show alert
-      Log.error(errorMessage)
-    }
+    self.displayedFeeds = viewModel.feeds
+    self.tableNode.reloadData()
+  }
+  func displayNetworkingError(viewModel: HomeModels.NetworkingError.ViewModel) {
+    
   }
 }
 

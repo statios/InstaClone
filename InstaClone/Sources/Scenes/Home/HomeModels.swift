@@ -17,10 +17,17 @@ enum HomeModels {
     }
 
     struct ViewModel {
-      let user: User?
-      let stories: [Story]?
-      let feeds: [Feed]?
-      let errorMessage: String?
+      let user: User
+      let stories: [Story]
+      let feeds: [Feed]
+    }
+  }
+  
+  enum NetworkingError {
+    struct Request { }
+    struct Response { }
+    struct ViewModel {
+      let message: String
     }
   }
 }
