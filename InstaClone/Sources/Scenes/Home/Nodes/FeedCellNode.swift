@@ -15,6 +15,7 @@ class FeedCellNode: ASCellNode {
   init(feed: Feed?) {
     super.init()
     automaticallyManagesSubnodes = true
+    selectionStyle = .none
     feedHeaderNode.configure(feed: feed)
     feedImageNode.configure(feed: feed)
   }

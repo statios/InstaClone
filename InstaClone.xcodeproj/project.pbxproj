@@ -22,6 +22,7 @@
 		F9A8875025949057008099EC /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A8874F25949057008099EC /* Story.swift */; };
 		F9A8875B25949065008099EC /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A8875A25949065008099EC /* Feed.swift */; };
 		F9A8876325949074008099EC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A8876225949074008099EC /* Comment.swift */; };
+		F9CB42AF259776CA0072997D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB42AE259776CA0072997D /* Image.swift */; };
 		F9D7B0AE2594ABF800FAB19B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0AD2594ABF800FAB19B /* MainViewController.swift */; };
 		F9D7B0B62594B45300FAB19B /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0B52594B45300FAB19B /* BaseNode.swift */; };
 		F9D7B0BC2594B52A00FAB19B /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0BB2594B52A00FAB19B /* Logging.swift */; };
@@ -95,6 +96,7 @@
 		F9A8875A25949065008099EC /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		F9A8876225949074008099EC /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F9C8C54D4EB3AE51D7DD95FB /* Pods_InstaClone_InstaCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaClone_InstaCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9CB42AE259776CA0072997D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		F9D7B0AD2594ABF800FAB19B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F9D7B0B52594B45300FAB19B /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
 		F9D7B0BB2594B52A00FAB19B /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				F9D7B14A25972F9700FAB19B /* Device.swift */,
+				F9CB42AE259776CA0072997D /* Image.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				F9D7B10E25958D8B00FAB19B /* NetworkLoggerPlugin.swift in Sources */,
 				F9D7B0E32594BA6300FAB19B /* SearchInteractor.swift in Sources */,
 				F9D7B1202596411100FAB19B /* HomeInteractor.swift in Sources */,
+				F9CB42AF259776CA0072997D /* Image.swift in Sources */,
 				F9D7B1742597716000FAB19B /* NetworkingWorker.swift in Sources */,
 				F9D7B11D2596411100FAB19B /* HomeRouter.swift in Sources */,
 				F9D7B11B2596411100FAB19B /* HomePresenter.swift in Sources */,
