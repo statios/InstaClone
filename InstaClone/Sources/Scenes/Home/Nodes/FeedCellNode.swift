@@ -33,10 +33,12 @@ class FeedCellNode: ASCellNode {
     layouts.append(feedImageNode)
     layouts.append(feedMidNode)
     
+    if let likes = feed?.likes, likes > 0 {
+      
+    }
+    
     if let _ = feed?.lastComment.user {
       layouts.append(feedLastCommentNode)
-    } else {
-      Log.error("no comment")
     }
     
     return ASStackLayoutSpec(

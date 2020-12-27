@@ -25,6 +25,7 @@
 		F9CB42AF259776CA0072997D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB42AE259776CA0072997D /* Image.swift */; };
 		F9CB42B7259781DC0072997D /* FeedMidNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB42B6259781DC0072997D /* FeedMidNode.swift */; };
 		F9CB42DA259880A30072997D /* FeedLastCommentNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB42D9259880A30072997D /* FeedLastCommentNode.swift */; };
+		F9CB42E12598DEAF0072997D /* StoryCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB42E02598DEAF0072997D /* StoryCellNode.swift */; };
 		F9D7B0AE2594ABF800FAB19B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0AD2594ABF800FAB19B /* MainViewController.swift */; };
 		F9D7B0B62594B45300FAB19B /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0B52594B45300FAB19B /* BaseNode.swift */; };
 		F9D7B0BC2594B52A00FAB19B /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D7B0BB2594B52A00FAB19B /* Logging.swift */; };
@@ -101,6 +102,7 @@
 		F9CB42AE259776CA0072997D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		F9CB42B6259781DC0072997D /* FeedMidNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMidNode.swift; sourceTree = "<group>"; };
 		F9CB42D9259880A30072997D /* FeedLastCommentNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLastCommentNode.swift; sourceTree = "<group>"; };
+		F9CB42E02598DEAF0072997D /* StoryCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCellNode.swift; sourceTree = "<group>"; };
 		F9D7B0AD2594ABF800FAB19B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F9D7B0B52594B45300FAB19B /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
 		F9D7B0BB2594B52A00FAB19B /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
@@ -375,6 +377,26 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		F9CB42DE2598DE910072997D /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F9D7B1522597389600FAB19B /* FeedCellNode.swift */,
+				F9D7B16225973B0300FAB19B /* FeedTopNode.swift */,
+				F9D7B15A259738A100FAB19B /* FeedImageNode.swift */,
+				F9CB42B6259781DC0072997D /* FeedMidNode.swift */,
+				F9CB42D9259880A30072997D /* FeedLastCommentNode.swift */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		F9CB42DF2598DE9F0072997D /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				F9CB42E02598DEAF0072997D /* StoryCellNode.swift */,
+			);
+			name = Story;
+			sourceTree = "<group>";
+		};
 		F9D7B0BA2594B51E00FAB19B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,11 +439,8 @@
 		F9D7B13B25972D0700FAB19B /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				F9D7B1522597389600FAB19B /* FeedCellNode.swift */,
-				F9D7B16225973B0300FAB19B /* FeedTopNode.swift */,
-				F9D7B15A259738A100FAB19B /* FeedImageNode.swift */,
-				F9CB42B6259781DC0072997D /* FeedMidNode.swift */,
-				F9CB42D9259880A30072997D /* FeedLastCommentNode.swift */,
+				F9CB42DF2598DE9F0072997D /* Story */,
+				F9CB42DE2598DE910072997D /* Feed */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -696,6 +715,7 @@
 				F9D7B0B62594B45300FAB19B /* BaseNode.swift in Sources */,
 				F9A8872425948B4C008099EC /* UIViewController+Rx.swift in Sources */,
 				F9D7B0D32594B67A00FAB19B /* BaseWorker.swift in Sources */,
+				F9CB42E12598DEAF0072997D /* StoryCellNode.swift in Sources */,
 				F9D7B16325973B0300FAB19B /* FeedTopNode.swift in Sources */,
 				F9A8875025949057008099EC /* Story.swift in Sources */,
 				F9CB42DA259880A30072997D /* FeedLastCommentNode.swift in Sources */,

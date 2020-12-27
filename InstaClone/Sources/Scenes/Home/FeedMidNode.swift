@@ -40,6 +40,8 @@ class FeedMidNode: BaseNode {
     $0.backgroundColor = .green
   }
   
+  var likeCount: Int?
+  
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
     let likeButtonNodeWithLeftPadding = ASInsetLayoutSpec(
       insets: .init(top: 8, left: 16, bottom: 8, right: 0),
@@ -74,21 +76,28 @@ class FeedMidNode: BaseNode {
       ]
     )
     
-    let likeTextNodeWithLeftPadding = ASInsetLayoutSpec(
-      insets: .init(top: 0, left: 16, bottom: 8, right: 16),
-      child: likeTextNode
-    )
+    var layouts = [ASLayoutElement]()
+    layouts.append(buttonsHorizontalStackSpec)
+    
+    if let count = likeCount, count > 0 {
+      let spec = ASInsetLayoutSpec(
+        insets: .init(top: 0, left: 16, bottom: 8, right: 16),
+        child: likeTextNode
+      )
+      layouts.append(spec)
+    }
     
     return ASStackLayoutSpec(
       direction: .vertical,
       spacing: 0,
       justifyContent: .start,
       alignItems: .stretch,
-      children: [buttonsHorizontalStackSpec, likeTextNodeWithLeftPadding]
+      children: layouts
     )
   }
   
   func configure(feed: Feed?) {
+    likeCount = feed?.likes
     let likeString = feed?.likes == 1 ? "\(feed?.likes ?? 0) like" : "\(feed?.likes ?? 0) likes"
     likeTextNode.attributedText = NSAttributedString(string: likeString)
   }
