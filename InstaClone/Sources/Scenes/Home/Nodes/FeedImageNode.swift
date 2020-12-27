@@ -8,11 +8,8 @@
 import AsyncDisplayKit
 
 class FeedImageNode: BaseNode {
-  private let imageNode = ASNetworkImageNode()
-  
-  override init() {
-    super.init()
-    imageNode.style.preferredSize.width = Device.width
+  private let imageNode = ASNetworkImageNode().then {
+    $0.style.preferredSize.width = Device.width
   }
   
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

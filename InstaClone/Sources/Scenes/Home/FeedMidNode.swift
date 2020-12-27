@@ -36,7 +36,9 @@ class FeedMidNode: BaseNode {
     $0.backgroundColor = .brown
   }
   
-  private let likeTextNode = ASTextNode()
+  private let likeTextNode = ASTextNode().then {
+    $0.backgroundColor = .green
+  }
   
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
     let likeButtonNodeWithLeftPadding = ASInsetLayoutSpec(
@@ -59,7 +61,7 @@ class FeedMidNode: BaseNode {
       $0.style.flexGrow = 1
     }
     
-    return ASStackLayoutSpec(
+    let buttonsHorizontalStackSpec = ASStackLayoutSpec(
       direction: .horizontal,
       spacing: 8,
       justifyContent: .start,
@@ -70,6 +72,19 @@ class FeedMidNode: BaseNode {
         shareButtonNode,
         bookmarkButtonNodeWithRightPadding
       ]
+    )
+    
+    let likeTextNodeWithLeftPadding = ASInsetLayoutSpec(
+      insets: .init(top: 0, left: 16, bottom: 8, right: 16),
+      child: likeTextNode
+    )
+    
+    return ASStackLayoutSpec(
+      direction: .vertical,
+      spacing: 0,
+      justifyContent: .start,
+      alignItems: .stretch,
+      children: [buttonsHorizontalStackSpec, likeTextNodeWithLeftPadding]
     )
   }
   
